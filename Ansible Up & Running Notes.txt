@@ -393,7 +393,7 @@ ansible [core 2.14.6]
 
 wsl --list --verbose
 wsl
-cd '/mnt/e/onedrive/favorites/documents/git repo/ansiblebook/chapter01'
+cd '/mnt/c/ansiblebook/chapter01'
 
 
 === SSH
@@ -428,11 +428,11 @@ PORT   STATE  SERVICE
 will receive error "System has not been booted with systemd as init system (PID 1). Can't operate"
 This error commonly occurs when using Windows Subsystem for Linux (WSL) or other environments that do not have a full systemd implementation.
 
-cd '/mnt/e/onedrive/favorites/documents/git repo/ansiblebook/chapter01'
+cd '/mnt/c/ansiblebook/chapter01'
 ssh vagrant@127.0.0.1 -p 2222 -i .vagrant/machines/default/virtualbox/private_key
 
 
-cd '/cygdrive/e/onedrive/favorites/documents/git repo/ansiblebook/chapter01'
+cd '/cygdrive/c/ansiblebook/chapter01'
  
 
 
@@ -454,19 +454,64 @@ bash , wget ,  tar , gawk , bzip2 , lynx
 
 apt-cyg install tree
 
+ --- cygpath
+ cygpath preinstalled tool
+ cygpath -u 'C:\ansiblebook\chapter01\playbooks'
+
 ============== Chapter 1 
 
-cd '/cygdrive/e/onedrive/favorites/documents/git repo/ansiblebook/chapter01'
+cd '/cygdrive/c/ansiblebook/chapter01'
 ssh vagrant@127.0.0.1 -p 2222 -i .vagrant/machines/default/virtualbox/private_key
-cp -r /cygdrive/e/onedrive/favorites/documents/git repo/ansiblebook/chapter01/.vagrant  /cygdrive/e/onedrive/favorites/documents/git repo/ansiblebook/chapter01/playbooks
-cd playbooks
+cp -r /cygdrive/c/ansiblebook/chapter01/.vagrant  /cygdrive/c/ansiblebook/chapter01/playbooks
+cd /cygdrive/c/ansiblebook/chapter01/playbooks
+
 ansible testserver -i inventory/vagrant.ini -m ping
+
+ansible testserver -m ping
+
+ansible testserver -b -a "tail /var/log/syslog"   --a or --args: Specifies the argument(s) to be passed to the command being executed.
+
+ansible testserver -b -m package -a name=nginx
+
+
+
+
 
 ============== Chapter 2 (code in chapter 1)
 
 $ vagrant init ubuntu/focal64
 $ vagrant up
 $ vagrant ssh
+
+
+
+====port-forwarding and Private IP
+
+Forward local machine port to vagrant VM port 80 or 433,  this allows VM acts like a regular host using port 80 and 433
+
+
+# Vagrantfile
+VAGRANTFILE_API_VERSION = "2"
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+# Other config options not shown
+config.vm.network :forwarded_port, host: 8000, guest: 80
+config.vm.network :forwarded_port, host: 8443, guest: 443
+end
+
+---- Assign Private IP
+# Vagrantfile
+VAGRANTFILE_API_VERSION = "2"
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+# Other config options not shown
+config.vm.network "private_network", ip: "192.168.33.10"
+end
+
+
+==== Agent Forwarding (enabled on the connection between myself and a remote server might need to access some other server  requires my credentials)
+
+Connect to a remote server with agent forwarding: When you establish an SSH connection to a remote server using the -A or -o ForwardAgent=yes option, you enable agent forwarding for that connection.
+
+remote server needs to access Git server via SSH using my private key. 
 
 
 
