@@ -1,0 +1,280 @@
+Folder PATH listing for volume Seagate 8T
+Volume serial number is 04B4-BE57
+E:.
+|   chapter01.txt
+|   chapter02.lst
+|   README.md
+|   
++---local
+|       playbook.yml
+|       Vagrantfile
+|       
+\---playbooks
+    |   .ansible-lint
+    |   ansible.cfg
+    |   config.json
+    |   playbook.yml
+    |   ubuntu-bionic-18.04-cloudimg-console.log
+    |   Vagrantfile
+    |   
+    +---.vagrant
+    |   |   plugins.json
+    |   |   
+    |   +---bundler
+    |   |       local.sol
+    |   |       
+    |   +---hostmanager
+    |   |       id
+    |   |       
+    |   +---machines
+    |   |   +---bionic
+    |   |   |   \---virtualbox
+    |   |   +---bullseye
+    |   |   |   \---virtualbox
+    |   |   +---buster
+    |   |   |   \---virtualbox
+    |   |   |           vagrant_cwd
+    |   |   |           
+    |   |   +---centos7
+    |   |   |   \---virtualbox
+    |   |   |           vagrant_cwd
+    |   |   |           
+    |   |   +---centos8
+    |   |   |   \---virtualbox
+    |   |   |           vagrant_cwd
+    |   |   |           
+    |   |   +---fedora
+    |   |   |   \---virtualbox
+    |   |   |           vagrant_cwd
+    |   |   |           
+    |   |   +---focal
+    |   |   |   \---virtualbox
+    |   |   |           vagrant_cwd
+    |   |   |           
+    |   |   +---impish
+    |   |   |   \---virtualbox
+    |   |   |           vagrant_cwd
+    |   |   |           
+    |   |   +---jessie
+    |   |   |   \---virtualbox
+    |   |   |           vagrant_cwd
+    |   |   |           
+    |   |   +---kali
+    |   |   |   \---virtualbox
+    |   |   |           vagrant_cwd
+    |   |   |           
+    |   |   +---rocky
+    |   |   |   \---virtualbox
+    |   |   |           vagrant_cwd
+    |   |   |           
+    |   |   +---stretch
+    |   |   |   \---virtualbox
+    |   |   |           vagrant_cwd
+    |   |   |           
+    |   |   \---xenial
+    |   |       \---virtualbox
+    |   |               vagrant_cwd
+    |   |               
+    |   +---plugins
+    |   |   \---gems
+    |   |       \---3.1.3
+    |   |           +---build_info
+    |   |           +---cache
+    |   |           |       micromachine-3.0.0.gem
+    |   |           |       vagrant-hostmanager-1.8.9.gem
+    |   |           |       vagrant-vbguest-0.31.0.gem
+    |   |           |       
+    |   |           +---doc
+    |   |           +---extensions
+    |   |           +---gems
+    |   |           |   +---micromachine-3.0.0
+    |   |           |   |   |   .gems
+    |   |           |   |   |   CHANGELOG.md
+    |   |           |   |   |   CONTRIBUTING
+    |   |           |   |   |   LICENSE
+    |   |           |   |   |   makefile
+    |   |           |   |   |   micromachine.gemspec
+    |   |           |   |   |   README.md
+    |   |           |   |   |   
+    |   |           |   |   +---examples
+    |   |           |   |   |       advanced.rb
+    |   |           |   |   |       basic.rb
+    |   |           |   |   |       callbacks.rb
+    |   |           |   |   |       
+    |   |           |   |   +---lib
+    |   |           |   |   |       micromachine.rb
+    |   |           |   |   |       
+    |   |           |   |   \---test
+    |   |           |   |           callbacks.rb
+    |   |           |   |           helper.rb
+    |   |           |   |           introspection.rb
+    |   |           |   |           transitions.rb
+    |   |           |   |           
+    |   |           |   +---vagrant-hostmanager-1.8.9
+    |   |           |   |   |   .gitignore
+    |   |           |   |   |   CHANGELOG.md
+    |   |           |   |   |   Gemfile
+    |   |           |   |   |   LICENSE
+    |   |           |   |   |   Rakefile
+    |   |           |   |   |   README.md
+    |   |           |   |   |   vagrant-hostmanager.gemspec
+    |   |           |   |   |   
+    |   |           |   |   +---lib
+    |   |           |   |   |   |   vagrant-hostmanager.rb
+    |   |           |   |   |   |   
+    |   |           |   |   |   \---vagrant-hostmanager
+    |   |           |   |   |       |   action.rb
+    |   |           |   |   |       |   command.rb
+    |   |           |   |   |       |   config.rb
+    |   |           |   |   |       |   errors.rb
+    |   |           |   |   |       |   plugin.rb
+    |   |           |   |   |       |   provisioner.rb
+    |   |           |   |   |       |   util.rb
+    |   |           |   |   |       |   version.rb
+    |   |           |   |   |       |   
+    |   |           |   |   |       +---action
+    |   |           |   |   |       |       update_all.rb
+    |   |           |   |   |       |       update_guest.rb
+    |   |           |   |   |       |       update_host.rb
+    |   |           |   |   |       |       
+    |   |           |   |   |       \---hosts_file
+    |   |           |   |   |               updater.rb
+    |   |           |   |   |               
+    |   |           |   |   +---locales
+    |   |           |   |   |       en.yml
+    |   |           |   |   |       
+    |   |           |   |   \---test
+    |   |           |   |           test.sh
+    |   |           |   |           Vagrantfile
+    |   |           |   |           
+    |   |           |   \---vagrant-vbguest-0.31.0
+    |   |           |       |   .editorconfig
+    |   |           |       |   .gitignore
+    |   |           |       |   CHANGELOG.md
+    |   |           |       |   CODE_OF_CONDUCT.md
+    |   |           |       |   Gemfile
+    |   |           |       |   LICENSE
+    |   |           |       |   Rakefile
+    |   |           |       |   Readme.md
+    |   |           |       |   SECURITY.md
+    |   |           |       |   vagrant-vbguest.gemspec
+    |   |           |       |   VERSION
+    |   |           |       |   
+    |   |           |       +---lib
+    |   |           |       |   |   vagrant-vbguest.rb
+    |   |           |       |   |   
+    |   |           |       |   \---vagrant-vbguest
+    |   |           |       |       |   command.rb
+    |   |           |       |       |   config.rb
+    |   |           |       |       |   download.rb
+    |   |           |       |       |   errors.rb
+    |   |           |       |       |   installer.rb
+    |   |           |       |       |   machine.rb
+    |   |           |       |       |   middleware.rb
+    |   |           |       |       |   version.rb
+    |   |           |       |       |   
+    |   |           |       |       +---helpers
+    |   |           |       |       |       os_release.rb
+    |   |           |       |       |       rebootable.rb
+    |   |           |       |       |       vm_compatible.rb
+    |   |           |       |       |       
+    |   |           |       |       +---hosts
+    |   |           |       |       |       base.rb
+    |   |           |       |       |       virtualbox.rb
+    |   |           |       |       |       
+    |   |           |       |       \---installers
+    |   |           |       |               archlinux.rb
+    |   |           |       |               base.rb
+    |   |           |       |               centos.rb
+    |   |           |       |               debian.rb
+    |   |           |       |               fedora.rb
+    |   |           |       |               linux.rb
+    |   |           |       |               opensuse.rb
+    |   |           |       |               oracle.rb
+    |   |           |       |               redhat.rb
+    |   |           |       |               suse.rb
+    |   |           |       |               ubuntu.rb
+    |   |           |       |               windows.rb
+    |   |           |       |               
+    |   |           |       \---locales
+    |   |           |               en.yml
+    |   |           |               en_centos.yml
+    |   |           |               en_windows.yml
+    |   |           |               
+    |   |           +---plugins
+    |   |           \---specifications
+    |   |                   micromachine-3.0.0.gemspec
+    |   |                   vagrant-hostmanager-1.8.9.gemspec
+    |   |                   vagrant-vbguest-0.31.0.gemspec
+    |   |                   
+    |   \---rgloader
+    |           loader.rb
+    |           
+    +---host_vars
+    |       bionic
+    |       bullseye
+    |       buster
+    |       centos7
+    |       centos8
+    |       fedora
+    |       focal
+    |       hirsute
+    |       impish
+    |       jessie
+    |       kali
+    |       rocky
+    |       stretch
+    |       xenial
+    |       
+    +---inventory
+    |       vagrant.py
+    |       
+    \---roles
+        |   requirements.yml
+        |   
+        \---java
+            |   .gitignore
+            |   .yamllint
+            |   LICENSE
+            |   README.md
+            |   
+            +---.github
+            |   \---workflows
+            +---defaults
+            |       main.yml
+            |       
+            +---meta
+            |       .galaxy_install_info
+            |       main.yml
+            |       
+            +---molecule
+            |   \---default
+            |           converge.yml
+            |           molecule.yml
+            |           
+            +---tasks
+            |       main.yml
+            |       setup-Debian.yml
+            |       setup-FreeBSD.yml
+            |       setup-RedHat.yml
+            |       
+            +---templates
+            |       java_home.sh.j2
+            |       
+            \---vars
+                    Debian-10.yml
+                    Debian-11.yml
+                    Debian-8.yml
+                    Debian-9.yml
+                    Fedora.yml
+                    FreeBSD.yml
+                    RedHat-7.yml
+                    RedHat-8.yml
+                    RedHat-9.yml
+                    Ubuntu-12.yml
+                    Ubuntu-14.yml
+                    Ubuntu-16.yml
+                    Ubuntu-18.yml
+                    Ubuntu-20.yml
+                    Ubuntu-22.yml
+                    
