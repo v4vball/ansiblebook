@@ -129,6 +129,36 @@ vagrant destroy -f
 
 ssh vagrant@127.0.0.1 -p 2222 -i .vagrant/machines/default/virtualbox/private_key
 
+3) using username and password
+
+sudo nano /etc/ssh/sshd_config 
+uncomment  #PasswordAuthentication yes
+restarting SSH by running  
+
+sudo service ssh restart
+
+sudo service ssh status
+
+
+sshpass -p 121121 ssh -p 2223 v4vball@127.0.0.1:2223
+
+$ ssh -p 2223 v4vball@127.0.0.1
+The authenticity of host '[127.0.0.1]:2223 ([127.0.0.1]:2223)' can't be established.
+ED25519 key fingerprint is SHA256:wCj5tNDMBWRj5pAQkvlpWFI23X8dyLt4+vSM2wGMcGY.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[127.0.0.1]:2223' (ED25519) to the list of known hosts.
+v4vball@127.0.0.1's password:
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.10.16.3-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+Last login: Mon May 29 22:53:49 2023 from 127.0.0.1
+v4vball@Blackmagic:~$
+
+
 
 
 ===== SSH host keys issue when run SSH command
@@ -175,6 +205,11 @@ The first time you connect to a remote server, your SSH client prompts you to co
 By comparing the received fingerprint with a trusted source (such as the server administrator), you can confirm that the server's host key is legitimate and not subject to tampering or impersonation. Once the fingerprint is verified, the SSH client adds the server's host key to the known_hosts file for future reference.
 
 It's important to pay attention to host key warnings or errors, as they can indicate potential security threats. If you encounter host key-related errors or mismatched fingerprints, it is recommended to investigate further to ensure the integrity of the SSH connection and protect against possible man-in-the-middle attacks.
+
+
+
+=========== 
+
 
 
 
@@ -340,7 +375,7 @@ Save and close with Ctrl+S, Ctrl+X.
 Start RDP with: sudo /etc/init.d/xrdp start.
 Now, open Remote Desktop on your Windows host machine, and connect to localhost:3390.
 
-
+9) to stop wsl --shutdown
 
 
 9) Install python , pip, ansible packages 
@@ -515,3 +550,18 @@ remote server needs to access Git server via SSH using my private key.
 
 
 
+
+============ running setup module to 
+
+ansible 127.0.0.1 -m setup -e 'ansible_port=2223 ansible_user=v4vball ansible_password=121121 ansible_connection=ssh ansible_python_interpreter=/usr/bin/python3'
+
+
+check on Ubuntu 
+
+which python   ---->  return no result
+which python3  ----> /usr/bin/python3
+
+
+ the ansible_python_interpreter variable does have a default value in Ansible. The default value is set based on the target system's operating system and is automatically determined by Ansible.
+
+For most Linux distributions, the default value is /usr/bin/python. This assumes that the target system has Python 2 installed at /usr/bin/python.
