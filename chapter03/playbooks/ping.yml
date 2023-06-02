@@ -1,0 +1,11 @@
+- name: Debug output of ping
+  hosts: webservers
+  gather_facts: false
+  vars:
+    ansible_ssh_common_args: '-vvv'
+  tasks:
+    - name: Ping the hosts
+      ping:
+    - name: Debug ping output
+      debug:
+        var: ansible_ping
